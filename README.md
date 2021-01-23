@@ -14,6 +14,9 @@
   </p>
 </div>
 
+### 📑 [Issue 정리](https://github.com/JeonJiyoun/ReactTodo/issues)  
+### 📚 [Wiki 정리](https://github.com/JeonJiyoun/ReactTodo/wiki)
+
 ## 📺 프로젝트 실행 화면
 
 ## ✔️ 주요 기능
