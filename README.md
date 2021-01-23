@@ -34,7 +34,3 @@ cd src
 npm install
 npm run start
 ```
-
-## ⭐ Show your support
-이 프로젝트가 도움이 되셨다면 🌟 눌러주세요!  
-버그나 에러사항은 이슈를 통해 작성해주시면 감사하겠습니다!
