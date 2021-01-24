@@ -1,11 +1,14 @@
 // App.tsx
-import * as React from 'react';
+import * as React from "react";
+import { AppLayout, GlobalStyle } from "./layouts/AppLayout";
 
 const App = () => {
-    return <div>
-        <h1> 메롱다리 디요니😍 </h1>
-    </div>
-}
-
+  return (
+    <>
+      <GlobalStyle />
+      <AppLayout />
+    </>
+  );
+};
 
 export default App;
