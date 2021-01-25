@@ -1,4 +1,5 @@
 import React from "react";
+import HeaderLayout from "../layouts/HeaderLayout";
 
 interface Props {
   text: string;
@@ -6,7 +7,7 @@ interface Props {
 }
 
 function Header({ text = "to do list", onClickEvent }: Props) {
-  return <div onClick={onClickEvent}>{text}</div>;
+  return <HeaderLayout onClick={onClickEvent}>{text}</HeaderLayout>;
 }
 
 export default Header;
