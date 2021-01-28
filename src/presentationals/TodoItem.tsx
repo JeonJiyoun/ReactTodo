@@ -45,8 +45,11 @@ function TodoItem({ todo, toggle, remove, update }: Props) {
     <TodoItemLayout>
       <Input value={text} onChange={onChangeInput} onKeyUp={onEnter} />
       <CheckCircle done={true} onClick={onClickUpdate}>
-        {<MdDone />}
+        <MdDone />
       </CheckCircle>
+      <Remove mode={1} onClick={() => remove(todo.id)}>
+        <MdDelete />
+      </Remove>
     </TodoItemLayout>
   ) : (
     <TodoItemLayout>
@@ -57,7 +60,7 @@ function TodoItem({ todo, toggle, remove, update }: Props) {
       <EditIcon onClick={() => setEditMode(!editMode)}>
         <MdModeEdit />
       </EditIcon>
-      <Remove onClick={() => remove(todo.id)}>
+      <Remove mode={0} onClick={() => remove(todo.id)}>
         <MdDelete />
       </Remove>
     </TodoItemLayout>
