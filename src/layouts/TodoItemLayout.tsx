@@ -6,10 +6,15 @@ export const Remove = styled.div`
   color: #dee2e6;
   font-size: 24px;
   cursor: pointer;
+  display: none;
   &:hover {
     color: #ff6b6b;
   }
-  display: none;
+  ${($props: { mode: number }) =>
+    $props.mode === 1 &&
+    css`
+      display: flex;
+    `}
 `;
 
 const TodoItemLayout = styled.div`
