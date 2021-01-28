@@ -15,7 +15,7 @@ interface Props {
 
 function TodoItemContainer({ todo }: Props) {
   const dispatch = useDispatch();
-  console.log(todo)
+  console.log(todo);
 
   const toggle = (id: number) => {
     dispatch(toggleTodo(id));
@@ -28,9 +28,7 @@ function TodoItemContainer({ todo }: Props) {
   };
 
   return (
-    <TodoItemLayout>
-      <TodoItem todo={todo} toggle={toggle} remove={remove} update={update} />
-    </TodoItemLayout>
+    <TodoItem todo={todo} toggle={toggle} remove={remove} update={update} />
   );
 }
 
