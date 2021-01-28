@@ -1,11 +1,28 @@
 // App.tsx
-import * as React from 'react';
+import * as React from "react";
+import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
+import { AppLayout, GlobalStyle } from "./layouts/AppLayout";
+import { persistor, store } from "./modules";
+import {
+  HeaderContainer,
+  TodoContainer,
+  AddButtonContainer,
+} from "./containers";
 
 const App = () => {
-    return <div>
-        <h1> 메롱다리 디요니😍 </h1>
-    </div>
-}
-
+  return (
+    <Provider store={store}>
+      <PersistGate persistor={persistor}>
+        <GlobalStyle />
+        <AppLayout>
+          <HeaderContainer />
+          <TodoContainer />
+          <AddButtonContainer />
+        </AppLayout>
+      </PersistGate>
+    </Provider>
+  );
+};
 
 export default App;
