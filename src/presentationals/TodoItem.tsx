@@ -23,6 +23,13 @@ function TodoItem({ todo, toggle, remove, update }: Props) {
   const onChangeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     setText(e.currentTarget.value);
   };
+
+  const onEnter = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      onClickUpdate();
+    }
+  };
+
   const onClickUpdate = () => {
     if (text === "") {
       alert("할 일을 입력하세요");
@@ -31,11 +38,12 @@ function TodoItem({ todo, toggle, remove, update }: Props) {
     update(todo.id, text);
     setEditMode(false);
   };
+
   console.log(text);
 
   return editMode ? (
     <TodoItemLayout>
-      <Input value={text} onChange={onChangeInput} />
+      <Input value={text} onChange={onChangeInput} onKeyUp={onEnter} />
       <CheckCircle done={true} onClick={onClickUpdate}>
         {<MdDone />}
       </CheckCircle>
