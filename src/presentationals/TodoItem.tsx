@@ -12,9 +12,9 @@ import { TodoItemDataType } from "../modules/todo";
 
 interface Props {
   todo: TodoItemDataType;
-  toggle: (id: number) => void;
-  remove: (id: number) => void;
-  update: (id: number, text: string) => void;
+  toggle: (id: string) => void;
+  remove: (id: string) => void;
+  update: (id: string, text: string) => void;
 }
 
 function TodoItem({ todo, toggle, remove, update }: Props) {
@@ -38,8 +38,6 @@ function TodoItem({ todo, toggle, remove, update }: Props) {
     update(todo.id, text);
     setEditMode(false);
   };
-
-  console.log(text);
 
   return editMode ? (
     <TodoItemLayout>

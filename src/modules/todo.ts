@@ -1,6 +1,6 @@
 /**initial state */
 export interface TodoItemDataType {
-  id: number;
+  id: string;
   text: string;
   date: string;
   done: boolean;
@@ -14,26 +14,25 @@ const UPDATE: string = "todo/UPDATE";
 const REMOVE: string = "todo/REMOVE";
 
 /**Action Creator */
-let todoId = 1;
 let today = new Date();
 export const addTodo = (text: string = "") => ({
   type: ADD,
   newTodo: {
-    id: todoId++,
+    id: Math.random().toString(36).substr(2, 11),
     text: text,
     date: today.toLocaleDateString(),
     done: false,
   },
 });
 
-export const toggleTodo = (id: number) => ({
+export const toggleTodo = (id: string) => ({
   type: TOGGLE,
   data: {
     id,
   },
 });
 
-export const updateTodo = (id: number, text: string) => ({
+export const updateTodo = (id: string, text: string) => ({
   type: UPDATE,
   data: {
     id,
@@ -41,7 +40,7 @@ export const updateTodo = (id: number, text: string) => ({
   },
 });
 
-export const removeTodo = (id: number) => ({
+export const removeTodo = (id: string) => ({
   type: REMOVE,
   data: { id },
 });
@@ -52,6 +51,7 @@ type TodoActionTypes = ReturnType<typeof addTodo> &
   ReturnType<typeof removeTodo>;
 
 /**Reducer */
+
 export default function todoFunction(
   state = initialState,
   action: TodoActionTypes
