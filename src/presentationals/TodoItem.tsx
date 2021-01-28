@@ -6,9 +6,8 @@ import TodoItemLayout, {
   EditIcon,
   Remove,
   TodoText,
+  Input,
 } from "../layouts/TodoItemLayout";
-import { Input } from "../layouts/TodoItemLayout";
-
 import { TodoItemDataType } from "../modules/todo";
 
 interface Props {
@@ -50,27 +49,11 @@ function TodoItem({ todo, toggle, remove, update }: Props) {
       <EditIcon onClick={() => setEditMode(!editMode)}>
         <MdModeEdit />
       </EditIcon>
-      <Remove>
+      <Remove onClick={() => remove(todo.id)}>
         <MdDelete />
       </Remove>
     </TodoItemLayout>
   );
-
-  // {editMode ?  : (
-  //     <TodoItemLayout>
-  //     <CheckCircle done={todo.done}>{todo.done && <MdDone />}</CheckCircle>
-  //     <TodoText>{todo.Text}</TodoText>
-  //   )}
-
-  //   {editMode ? (
-  //     <EditIcon onClick={setEditMode(!editMode)}>
-  //       <MdModeEdit />
-  //     </EditIcon>
-  //   ) : (
-  //     <CheckCircle done={todo.done}>{todo.done && <MdDone />}</CheckCircle>
-  //   )}
-  //   <Input value={text} onChange={onChangeInput} />
-  // </TodoItemLayout>
 }
 
 export default TodoItem;
