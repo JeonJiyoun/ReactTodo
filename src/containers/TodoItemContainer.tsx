@@ -15,15 +15,14 @@ interface Props {
 
 function TodoItemContainer({ todo }: Props) {
   const dispatch = useDispatch();
-  console.log(todo);
 
-  const toggle = (id: number) => {
+  const toggle = (id: string) => {
     dispatch(toggleTodo(id));
   };
-  const remove = (id: number) => {
+  const remove = (id: string) => {
     dispatch(removeTodo(id));
   };
-  const update = (id: number, text: string) => {
+  const update = (id: string, text: string) => {
     dispatch(updateTodo(id, text));
   };
 

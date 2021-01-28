@@ -11,7 +11,7 @@ function TodoList({ todos }: Props) {
   const todoComponents = todos.map((todo, key) => {
     return <TodoItemContainer key={key} todo={todo}></TodoItemContainer>;
   });
-  console.log(todos, todoComponents);
+  
   return <TodoListLayout>{todoComponents}</TodoListLayout>;
 }
 
