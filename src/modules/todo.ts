@@ -52,6 +52,7 @@ type TodoActionTypes = ReturnType<typeof addTodo> &
   ReturnType<typeof removeTodo>;
 
 /**Reducer */
+
 export default function todoFunction(
   state = initialState,
   action: TodoActionTypes
