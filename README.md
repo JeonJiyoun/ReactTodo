@@ -17,8 +17,6 @@
 ### 📑 [Issue 정리](https://github.com/JeonJiyoun/ReactTodo/issues)  
 ### 📚 [Wiki 정리](https://github.com/JeonJiyoun/ReactTodo/wiki)
 
-## 📺 프로젝트 실행 화면
-
 ## ✔️ 주요 기능
 ### 1. Todo 추가
 ![생성](https://user-images.githubusercontent.com/60457112/106348484-f323d780-6309-11eb-8b37-3fd4d28874e4.gif)
