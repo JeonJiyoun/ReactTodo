@@ -32,6 +32,9 @@
 ### 4. 새로고침 시, Todo 유지
 ![유지](https://user-images.githubusercontent.com/60457112/106348487-f4ed9b00-6309-11eb-8919-630ef1c0985e.gif)
 
+### 5. Todo 완료
+![클릭](https://user-images.githubusercontent.com/60457112/106351769-93392b00-6321-11eb-89f9-49ff66856629.gif)
+
 ## ⚒️ 기술 스택
 - React.js
 - Typescript
