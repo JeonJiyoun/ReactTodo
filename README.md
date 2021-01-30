@@ -2,7 +2,7 @@
 > ReactTodo 프로젝트는 Typescript 기반 React 프로젝트로서, 컴포넌트 설계에서부터 Redux 적용까지 구현한 프로젝트입니다.
 <div align="center">
   <p align="center">
-    <img src="https://user-images.githubusercontent.com/60457112/106348345-f1a5df80-6308-11eb-8f2e-a5e025161d7f.png" width="500px"/>
+    <img src="https://user-images.githubusercontent.com/60457112/106348345-f1a5df80-6308-11eb-8f2e-a5e025161d7f.png" width="600px"/>
   </p>
   <p align="center">
     <img src="https://img.shields.io/badge/javascript-ES6+-yellow?logo=javascript"/>
