@@ -46,6 +46,6 @@
 git clone https://github.com/JeonJiyoun/ReactTodo.git
 cd src
 npm install
-npm run start
+npm start  // 자동 open 옵션 걸어놓음 
 ```
 ## Show your support
