@@ -1,6 +1,5 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { RootState } from "../modules";
+import { useDispatch } from "react-redux";
 import { addTodo } from "../modules/todo";
 import AddButton from "../presentationals/AddButton";
 
